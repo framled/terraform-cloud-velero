@@ -1,0 +1,14 @@
+kind: Restore
+apiVersion: velero.io/v1
+metadata:
+  name: test-restore
+  namespace: velero
+spec:
+  backupName: test-backup
+  includedNamespaces:
+    - "*"
+  excludedNamespaces:
+  includedResources:
+    - "*"
+  excludedResources:
+  labelSelector:

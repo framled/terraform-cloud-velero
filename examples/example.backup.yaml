@@ -1,0 +1,15 @@
+kind: Backup
+apiVersion: velero.io/v1
+metadata:
+  name: test-backup
+  namespace: velero
+spec:
+  includedNamespaces:
+    - "*"
+  excludedNamespaces:
+  includedResources:
+    - "*"
+  excludedResources:
+  labelSelector:
+  snapshotVolumes: false
+  ttl: 24h0m0s
