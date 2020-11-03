@@ -7,7 +7,8 @@ Terraform module that deploy cloud-platform velero which manages the backup and 
 The following example will create a storage account and all the necessaries resources
 ```
 module velero {
-  source = "github.com/framled/terraform-cloud-velero"
+  source  = "framled/velero/cloud"
+  version = "0.1.0"
   service_principal_credentials = {
     client_id = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
     client_secret = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
@@ -27,7 +28,8 @@ If you want to use a existed storage, you have to setup the storage_account_name
 
 ```
 module velero {
-  source = "github.com/framled/terraform-cloud-velero"
+  source  = "framled/velero/cloud"
+  version = "0.1.0"
   service_principal_credentials = {
     client_id = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
     client_secret = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
